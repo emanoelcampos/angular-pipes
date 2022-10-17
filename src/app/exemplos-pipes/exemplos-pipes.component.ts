@@ -42,7 +42,7 @@ export class ExemplosPipesComponent implements OnInit {
   });
 
   valorAsync2 = interval(2000).pipe(
-    map(valor => 'Valor assíncrono 2'));
+    map(() => 'Valor assíncrono 2'));
 
   constructor() { }
 
