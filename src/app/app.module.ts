@@ -1,3 +1,4 @@
+import { SettingsService } from './settings.service';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import '@angular/common/locales/global/pt';
@@ -22,6 +23,12 @@ import { CamelCasePipe } from './camel-case.pipe';
       provide: LOCALE_ID,
       useValue: 'pt-BR'
     }*/
+    SettingsService,
+    {
+      provide: LOCALE_ID,
+      deps: [SettingsService],
+      useFactory: (settingsService: any) => settingsService.getLocale()
+    }
   ],
   bootstrap: [AppComponent]
 })
