@@ -11,7 +11,7 @@
 <pre>{{ livro | json }}</pre>
 
 <label for="filtro">Filtrar</label>
-<input type="text" name="filtro" id="filtro" [(ngModel)]="filtro">
+<input type="text" id="filtro" [(ngModel)]="filtro">
 <br>
 <input type="text" #novoValor>
 <button (click)="addCurso(novoValor.value)">Adicionar Curso</button>
@@ -39,3 +39,11 @@
     {{ liv }}
   </li>
 </ul>
+
+<p>
+  {{ valorAsync | async }}
+</p>
+
+<p>
+  {{ valorAsync2 | async }}
+</p>
