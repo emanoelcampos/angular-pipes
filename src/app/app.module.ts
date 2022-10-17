@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import '@angular/common/locales/global/pt';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,12 @@ import { CamelCasePipe } from './camel-case.pipe';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    /*{
+      provide: LOCALE_ID,
+      useValue: 'pt-BR'
+    }*/
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
