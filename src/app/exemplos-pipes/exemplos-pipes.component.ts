@@ -18,10 +18,21 @@ export class ExemplosPipesComponent implements OnInit {
 
   livros: string[] = ['Java', 'Angular']
 
-  filtro: string = '';
+  filtro: any = '';
 
   addCurso(valor:any) {
     this.livros.push(valor);
+  }
+
+  obterCursos() {
+    if (this.livros.length === 0  || this.filtro === undefined || this.filtro.trim() === '') {
+      return this.livros;
+    }
+
+    return this.livros.filter(
+      v => v.toLocaleLowerCase().includes(this.filtro.toLocaleLowerCase())
+   );
+
   }
 
   constructor() { }
