@@ -8,6 +8,4 @@ import { FiltroArrayPipe } from './filtro-array.pipe';
 })
 export class FiltroArrayImpuroPipe extends FiltroArrayPipe {
 
-
-
 }
